@@ -1,13 +1,13 @@
 (()=>{
 
     // Funciones basicas
-    function sumar(a, b){
+    function sumar(a:number, b:number){
         return a + b;
     }
     const sumarArreglado = (a:number, b: number):number=> a + b; 
 
-    var contar = heroes =>{
-        return heroes.lenth;
+    var contar = (heroes:string[]):number =>{
+        return heroes.length;
     }
     var contarHeroes = (heroes:string[]):number =>{
         return heroes.length;

@@ -6,7 +6,7 @@
     }
     var sumarArreglado = function (a, b) { return a + b; };
     var contar = function (heroes) {
-        return heroes.lenth;
+        return heroes.length;
     };
     var contarHeroes = function (heroes) {
         return heroes.length;
