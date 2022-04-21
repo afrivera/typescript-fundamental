@@ -6,6 +6,7 @@
     const villians = ['Omega rojo', 'Dormamu', 'Duende Verde'];
 
     villians.forEach( villian => console.log(villian.toLowerCase()));
+    numbers.forEach( villian => console.log(villian));
 
     console.log(numbers);
 
