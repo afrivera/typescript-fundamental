@@ -1,96 +1,94 @@
 "use strict";
+const conducirBatimovil = (auto) => {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelerar();
+};
+const batimovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelerar() {
+        console.log("...... gogogo!!!");
+    }
+};
+const guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+const reir = (guason) => {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+const ciudadGotica = (ciudadanos) => {
+    return ciudadanos.length;
+};
+class Persona {
+    constructor(nombre, edad, sexo, estadoCivil) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.sexo = sexo;
+        this.estadoCivil = estadoCivil;
+    }
+    imprimirBio() {
+        console.log(`${this.nombre} - ${this.edad} - ${this.estadoCivil} - ${this.sexo}`);
+    }
+}
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
+    let flash = {
+        name: 'Barry Allen',
+        age: 24,
+        powers: [1, 2],
+        getName() {
+            return this.name;
         }
-    }
-    class Xmen extends Mutante {
-        salvarMundo() {
-            return 'Mundo Salvado';
+    };
+    let superman = {
+        name: 'clark Kent',
+        age: 24,
+        powers: [1],
+        getName() {
+            return this.name;
         }
-    }
-    class Villian extends Mutante {
-        consquitarMundo() {
-            return 'Conquistar el Mundo';
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    const magneto = new Villian('Magneto', 'Magnus');
-    const printName = (character) => {
-        console.log(character.realName);
     };
 })();
 (() => {
-    class Avenger {
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-        }
-        static getAvgAge() {
-            return this.name;
-        }
-        bio() {
-            return `${this.name} (${this.team})`.toUpperCase();
-        }
-    }
-    Avenger.avgAge = 35;
-})();
-(() => {
-    class Avenger {
-        constructor(name, realName) {
+    class Mutants {
+        constructor(age, name, realName) {
+            this.age = age;
             this.name = name;
             this.realName = realName;
-            console.log('Constructor Avenger llamado');
         }
-        getFullName() {
-            return `${this.name}  -  ${this.realName}`;
-        }
-    }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-            console.log('constructor xmen llamado');
-        }
-        get fullName() {
-            return `${this.name}`;
-        }
-        set fullName(name) {
-            if (name.length < 3) {
-                throw new Error('name too short, should have 3 characters or +');
-            }
-            this.name = name;
-        }
-        getFullNameXMen() {
-            console.log(super.getFullName());
+        mutantPower(id) {
+            return `${this.name}- ${this.realName}`;
         }
     }
 })();
 (() => {
-    class Apocalipsis {
-        constructor(name) {
-            this.name = name;
+    const client = {
+        name: 'Andres',
+        address: {
+            id: 124,
+            zip: 'kdje',
+            city: 'Cali'
+        },
+        getFullAddress(id) {
+            return this.address.city;
         }
-        static callApocalipsis() {
-            if (!Apocalipsis.intance) {
-                Apocalipsis.intance = new Apocalipsis('Soy Apocalipsis el único');
-            }
-            return Apocalipsis.intance;
+    };
+    const client1 = {
+        name: 'Andrea',
+        age: 28,
+        address: {
+            id: 124,
+            zip: 'kdje',
+            city: 'Cali'
         }
-        changeName(newName) {
-            this.name = newName;
-        }
-    }
-    const apoca = Apocalipsis.callApocalipsis();
-    const apoca1 = Apocalipsis.callApocalipsis();
-    const apoca2 = Apocalipsis.callApocalipsis();
-    console.log(apoca);
-    console.log(apoca1);
-    console.log(apoca2);
-    apoca.changeName('Charles');
-    console.log(apoca);
+    };
+})();
+(() => {
+    let addToNumbersFunction;
+    addToNumbersFunction = (a, b) => 10;
 })();
 //# sourceMappingURL=main.js.map
